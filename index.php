@@ -1,3 +1,4 @@
+<?php require __DIR__ . '/send_comment.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +35,10 @@
      <!-- Seção para exibir os comentários -->
         <!-- Você pode adicionar os comentários dinamicamente a partir do banco de dados aqui -->
         <div class="comment">
+                <?php foreach ($comments as $str) { ?>
+                    <h3><?php echo $str['commentor_name']; ?></h3>
+                    <p><?php echo $str['comment_text']; ?></p>
+                <?php } ?>
             <h3>Nome Usuário</h3>
             <p>Este é um comentário de exemplo.</p>
         </div>
