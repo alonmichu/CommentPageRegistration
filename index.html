@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class=" bloco">
+        <h1>Minha Foto</h1>
+        
+        <img class="imag" src="Coelho.jpg" alt="Minha Foto">
+    
+        <div class="comment-section">
+        
+        <form method="POST" action="process_comment.php">
+        <h2>Comentários</h2>
+
+            <div class="label">
+                <label form="nome">Nome:</label><br>
+                <input class="inp01" type="text" name="nome" required><br>
+
+                <label form="comentario">Comentário:</label><br>
+                <textarea class="inp02" name="comentario" required></textarea><br>
+
+                <input class="enviarCom" type="submit" name="send" value="Enviar Comentário">
+            </div>
+
+        </form>
+
+       
+    </div>
+     <!-- Seção para exibir os comentários -->
+        <!-- Você pode adicionar os comentários dinamicamente a partir do banco de dados aqui -->
+        <div class="comment">
+            <h3>Nome Usuário</h3>
+            <p>Este é um comentário de exemplo.</p>
+        </div>
+</body>
+</html>

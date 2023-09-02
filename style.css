@@ -1,0 +1,83 @@
+/* Estilize o corpo da página */
+body {
+   background-color: midnightblue;
+
+}
+
+.bloco {
+    background-color: beige;
+    margin: 20px 20px 20px 20px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.bloco h1 {
+    
+    border: 1px solid  rgb(156, 155, 153);
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: burlywood;
+}
+    
+ 
+.imag {
+    border: 1px solid rgb(156, 155, 153);
+    width: 50%;
+    border-radius: 5px;
+    
+    
+}
+
+.comment-section {
+    border: 1px solid rgb(156, 155, 153);
+    width: 50%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: burlywood;
+        
+}
+.comment-section h2 {
+    text-align: left;
+    margin: 5px;
+}
+
+.label {
+    text-align: justify;
+    margin: 5px;
+    
+}
+
+.inp01{
+    width: 70%;
+}
+
+.inp02{
+    width: 70%;
+}
+
+.comment {
+    border: 1px solid rgb(156, 155, 153);
+    width: 50%;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: burlywood;
+}
+
+.comment h3 {
+    text-align: left;
+    width: 80%;
+    margin: 5px;
+    
+    
+}
+
+.comment p {
+    text-align: left;
+    width: 100%;
+    margin: 5px;
+    
+}
