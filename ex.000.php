@@ -24,8 +24,8 @@
             print("Date: " . $row['comment_date'] . "; Name: " . $row['commentor_name'] . "; 
             Comment: " . $row['comment_text'] . "<br>");
         }
-        $row = show_comment(1, $hostname, $usuarios, $senha, $bancodedados);
-        print("Date: " . $row['comment_date'] . "; Name: " . $row['commentor_name'] . "; 
-        Comment: " . $row['comment_text'] . "<br>");
+        //$row = show_comment(1, $hostname, $usuarios, $senha, $bancodedados);
+        //print("Date: " . $row['comment_date'] . "; Name: " . $row['commentor_name'] . "; 
+        //Comment: " . $row['comment_text'] . "<br>");
     }
 ?>

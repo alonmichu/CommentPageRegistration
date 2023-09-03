@@ -90,18 +90,19 @@ function show_comments(string $hostname, string $usuarios,
         *     array|bool: array of comments, false if operation wasn't successful.
     */
     $link = connect_mysql($hostname, $usuarios, $senha, $bancodedados);
+    $result = false;
     if ($link != false)
     {
         //date and time in format 'YYYY-MM-DD hh:mm:ss'
         $sql = "SELECT * FROM Comments";
         $result = mysqli_query($link, $sql);
-        if ($result != false)
+        /*if ($result != false)
         {
             $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
             return $rows;
-        }
+        }*/
     }
-    return false;
+    return $result;
 }
 
 function delete_comment(int $id, string $hostname, string $usuarios,
@@ -118,6 +119,7 @@ function delete_comment(int $id, string $hostname, string $usuarios,
         *     bool: if operation was successful or not.
     */
     $link = connect_mysql($hostname, $usuarios, $senha, $bancodedados);
+    $result = false;
     if ($link != false)
     {
         $sql = "DELETE FROM Comments WHERE id = $id";
@@ -126,8 +128,8 @@ function delete_comment(int $id, string $hostname, string $usuarios,
     return $result;
 }
 
-function show_comment(int $id, string $hostname, string $usuarios,
-                      string $senha, string $bancodedados)
+function get_comment(int $id, string $hostname, string $usuarios,
+                     string $senha, string $bancodedados)
 {
     /** The function returns array key-value of comment with the given id.
         * Args:
@@ -140,15 +142,16 @@ function show_comment(int $id, string $hostname, string $usuarios,
         *     array|bool: array of comment information, false if operation wasn't successful.
     */
     $link = connect_mysql($hostname, $usuarios, $senha, $bancodedados);
+    $result = false;
     if ($link != false)
     {
         $sql = "SELECT * FROM Comments WHERE id = $id";
         $result = mysqli_query($link, $sql);
-        if ($result != false)
+        /*if ($result != false)
         {
             $row = mysqli_fetch_array($result);
             return $row;
-        }
+        }*/
     }
-    return false;
+    return $result;
 }

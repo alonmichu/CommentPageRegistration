@@ -35,10 +35,13 @@
      <!-- Seção para exibir os comentários -->
         <!-- Você pode adicionar os comentários dinamicamente a partir do banco de dados aqui -->
         <div class="comment">
-                <?php foreach ($comments as $str) { ?>
+        <?php if ($comments->num_rows > 0) { ?>
+                    <?php $rows = mysqli_fetch_all($comments, MYSQLI_ASSOC);?>
+                    <?php foreach ($rows as $str) { ?>
                     <h3><?php echo $str['commentor_name']; ?></h3>
                     <p><?php echo $str['comment_text']; ?></p>
-                <?php } ?>
+                <?php } }?>
+            <?php mysqli_free_result($comments); ?>
             <h3>Nome Usuário</h3>
             <p>Este é um comentário de exemplo.</p>
         </div>
@@ -47,7 +50,6 @@
 <?php
     if (!empty($_POST))
     {
-        //require __DIR__ . '/database.php';
         $hostname = "localhost";
         $bancodedados ="meuteste";
         $usuarios = "root";
