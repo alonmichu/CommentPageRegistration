@@ -11,11 +11,14 @@
                         $commentor_name, $comment_text);
         }
     }*/
-    
-    /*<?php if ($comments->num_rows > 0){ ?>
-                <?php while ($array = mysqli_fetch_row($comments)) : ?>
-                    <h3><?php echo $array['commentor_name']; ?></h3>
-                    <p><?php echo $array['comment_text']; ?></p>
-                <?php endwhile; }?>
-            <?php mysqli_free_result($comments); ?> */
+
+    /*<div class="comment">
+        <?php if ($comments->num_rows > 0) { ?>
+                    <?php $rows = mysqli_fetch_all($comments, MYSQLI_ASSOC);?>
+                    <?php foreach ($rows as $str) { ?>
+                    <h3><?php echo $str['commentor_name']; ?></h3>
+                    <p><?php echo $str['comment_text']; ?></p>
+                <?php } }?>
+            <?php mysqli_free_result($comments); ?>
+            <h3>Nome Usuário</h3> */
 ?>

@@ -96,11 +96,11 @@ function show_comments(string $hostname, string $usuarios,
         //date and time in format 'YYYY-MM-DD hh:mm:ss'
         $sql = "SELECT * FROM Comments";
         $result = mysqli_query($link, $sql);
-        /*if ($result != false)
+        if ($result != false)
         {
             $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
             return $rows;
-        }*/
+        }
     }
     return $result;
 }
