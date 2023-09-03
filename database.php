@@ -13,20 +13,20 @@ function connect_mysql(string $hostname, string $usuarios,
         *     bool|mysqli: false if connection failed.
     */
     $link = mysqli_connect($hostname, $usuarios, $senha, $bancodedados);
-    if ($link == false)
-    {
+    if ($link != false)
+    {/*
         print("Error: can't connect to MySQL " . mysqli_connect_error());
     }
     else
     {
-        print("Connection succesful");
+        print("Connection succesful");*/
         mysqli_set_charset($link, "utf8");
     }
     return $link;
 }
 
 function create_comments_table(string $hostname, string $usuarios,
-                      string $senha, string $bancodedados)
+                               string $senha, string $bancodedados)
 {
     /** The function creates new table if it doesn't exists yet 
     * with fielsds id, commentor_name, comment_text and date.

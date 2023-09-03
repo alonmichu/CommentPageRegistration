@@ -15,7 +15,7 @@
     
         <div class="comment-section">
         
-        <form method="POST" action="process_comment.php">
+        <form method="POST" action="">
         <h2>Comentários</h2>
 
             <div class="label">
@@ -44,3 +44,17 @@
         </div>
 </body>
 </html>
+<?php
+    if (!empty($_POST))
+    {
+        //require __DIR__ . '/database.php';
+        $hostname = "localhost";
+        $bancodedados ="meuteste";
+        $usuarios = "root";
+        $senha = "";
+        $commentor_name =  $_POST['nome'];
+        $comment_text = $_POST['comentario'];
+        add_comment($hostname, $usuarios, $senha, $bancodedados,
+                    $commentor_name, $comment_text);
+    }
+?>
