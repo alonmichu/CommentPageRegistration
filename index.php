@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -42,6 +41,13 @@
             <h3>Nome Usuário</h3>
             <p>Este é um comentário de exemplo.</p>
         </div>
+    
+    </div>
+
+    
+ 
+        </form>    
+
 </body>
 </html>
 <?php
@@ -57,3 +63,20 @@
                     $commentor_name, $comment_text);
     }
 ?>
+<script> 
+        $(document).ready(function() { 
+            $('#carregar-dados').click(function() { 
+                $.ajax({ 
+                    url: 'ajax-fetch-record.php', // Caminho para o script PHP 
+                    type: 'GET', // Método de solicitação 
+                    dataType: 'json', // Tipo de dados esperado na resposta 
+                    success: function(data) { 
+                        $('#resultado').html(data.mensagem); // Exibir os dados na página 
+                    }, 
+                    error: function(xhr, status, error) { 
+                        console.error('Erro ao carregar os dados:', error); 
+                    } 
+                }); 
+            }); 
+        }); 
+</script>
